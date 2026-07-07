@@ -13,5 +13,6 @@ assert_eq() {
 
 assert_eq "hello-world" "$(slugify "Hello World")" "basic sentence"
 assert_eq "foo-bar" "$(slugify "Foo_Bar!!")" "special characters"
+assert_eq "multiple-spaces" "$(slugify "  Multiple   Spaces  ")" "collapses repeated separators and trims edges"
 
 echo "All tests passed."
